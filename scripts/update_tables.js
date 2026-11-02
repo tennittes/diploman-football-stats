@@ -5,26 +5,24 @@ const axios = require('axios');
 const API_KEY = process.env.FOOTBALL_DATA_API_KEY;
 
 const LEAGUES = [
-  { code: 'PL', id: 'PL' },
-  { code: 'PD', id: 'PD' },
-  { code: 'SA', id: 'SA' },
-  { code: 'BL1', id: 'BL1' },
-  { code: 'FL1', id: 'FL1' },
-  { code: 'DED', id: 'DED' },
-  { code: 'PPL', id: 'PPL' },
-  { code: 'BSA', id: 'BSA' }
+  { code: 'PL', id: 'PL', name: 'Premier League' },
+  { code: 'PD', id: 'PD', name: 'La Liga' },
+  { code: 'SA', id: 'SA', name: 'Serie A' },
+  { code: 'BL1', id: 'BL1', name: 'Bundesliga' },
+  { code: 'FL1', id: 'FL1', name: 'Ligue 1' },
+  { code: 'DED', id: 'DED', name: 'Eredivisie' },
+  { code: 'PPL', id: 'PPL', name: 'Primeira Liga' },
+  { code: 'BSA', id: 'BSA', name: 'Brasileirão' }
 ];
 
-async function runTickerEngine() {
+async function runCoreEngine() {
   const dataDir = path.join(__dirname, '../data');
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
-
-  const leaguesPayload = {};
 
   for (const league of LEAGUES) {
     const leagueCodeLower = league.code.toLowerCase();
     try {
-      console.log(`Fetching ticker matches for ${league.code}...`);
+      console.log(`Processing core data for ${league.name}...`);
       
       const response = await axios.get(`https://api.football-data.org/v4/competitions/${league.id}/matches?status=FINISHED`, {
         headers: { 'X-Auth-Token': API_KEY }
@@ -33,47 +31,51 @@ async function runTickerEngine() {
       const matches = response.data.matches || [];
       
       if (matches.length > 0) {
+        // Find the latest completed matchday/week
         const maxMatchday = Math.max(...matches.map(m => m.matchday || 0));
+        
+        // Filter ALL matches belonging to that latest completed matchday
         const weekMatches = matches.filter(m => m.matchday === maxMatchday);
 
-        leaguesPayload[leagueCodeLower] = weekMatches.map(m => {
+        const structuredMatches = weekMatches.map(m => {
+          const home = m.homeTeam.shortName || m.homeTeam.name;
+          const away = m.awayTeam.shortName || m.awayTeam.name;
           const hScore = m.score.fullTime.home ?? 0;
           const aScore = m.score.fullTime.away ?? 0;
+
           const h1_home = m.score.halfTime.home ?? 0;
           const h1_away = m.score.halfTime.away ?? 0;
+          const h2_home = hScore - h1_home;
+          const h2_away = aScore - h1_away;
 
           return {
-            home: m.homeTeam.shortName || m.homeTeam.name,
-            away: m.awayTeam.shortName || m.awayTeam.name,
+            id: m.id,
+            week: maxMatchday,
+            home: home,
+            away: away,
             home_score: hScore,
             away_score: aScore,
-            week: maxMatchday,
             h1_home: h1_home,
             h1_away: h1_away,
-            h2_home: hScore - h1_home,
-            h2_away: aScore - h1_away
+            h2_home: h2_home,
+            h2_away: h2_away,
+            utcDate: m.utcDate
           };
         });
-      } else {
-        leaguesPayload[leagueCodeLower] = [];
+
+        // Save individual league match file (e.g., data/pl-matches.json)
+        fs.writeFileSync(
+          path.join(dataDir, `${leagueCodeLower}-matches.json`),
+          JSON.stringify(structuredMatches, null, 2)
+        );
+        console.log(`Updated data/${leagueCodeLower}-matches.json`);
       }
     } catch (err) {
-      console.error(`Ticker update error for ${league.code}:`, err.message);
-      leaguesPayload[leagueCodeLower] = [];
+      console.error(`Error processing core data for ${league.name}:`, err.message);
     }
   }
 
-  const masterPayload = {
-    updated_at: new Date().toISOString(),
-    leagues: leaguesPayload
-  };
-
-  fs.writeFileSync(
-    path.join(dataDir, 'ticker.json'),
-    JSON.stringify(masterPayload, null, 2)
-  );
-
-  console.log('Successfully generated isolated data/ticker.json');
+  console.log('Successfully completed core table updates!');
 }
 
-runTickerEngine();
+runCoreEngine();
