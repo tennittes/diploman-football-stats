@@ -22,73 +22,60 @@ async function runCoreEngine() {
   for (const league of LEAGUES) {
     const leagueCodeLower = league.code.toLowerCase();
     try {
-      console.log(`Processing core & upcoming matches for ${league.name}...`);
+      console.log(`Processing core data for ${league.name}...`);
       
-      // Fetch both FINISHED and SCHEDULED matches
-      const response = await axios.get(`https://api.football-data.org/v4/competitions/${league.id}/matches`, {
+      const response = await axios.get(`https://api.football-data.org/v4/competitions/${league.id}/matches?status=FINISHED`, {
         headers: { 'X-Auth-Token': API_KEY }
       });
 
-      const allMatches = response.data.matches || [];
+      const matches = response.data.matches || [];
       
-      // 1. Process Finished Matches for Standing Engine
-      const finishedMatches = allMatches.filter(m => m.status === 'FINISHED');
-      if (finishedMatches.length > 0) {
-        const maxMatchday = Math.max(...finishedMatches.map(m => m.matchday || 0));
-        const weekFinished = finishedMatches.filter(m => m.matchday === maxMatchday);
+      if (matches.length > 0) {
+        // Find the latest completed matchday/week
+        const maxMatchday = Math.max(...matches.map(m => m.matchday || 0));
+        
+        // Filter ALL matches belonging to that latest completed matchday
+        const weekMatches = matches.filter(m => m.matchday === maxMatchday);
 
-        const structuredFinished = weekFinished.map(m => ({
-          id: m.id,
-          week: maxMatchday,
-          home: m.homeTeam.shortName || m.homeTeam.name,
-          away: m.awayTeam.shortName || m.awayTeam.name,
-          home_score: m.score.fullTime.home ?? 0,
-          away_score: m.score.fullTime.away ?? 0,
-          h1_home: m.score.halfTime.home ?? 0,
-          h1_away: m.score.halfTime.away ?? 0,
-          h2_home: (m.score.fullTime.home ?? 0) - (m.score.halfTime.home ?? 0),
-          h2_away: (m.score.fullTime.away ?? 0) - (m.score.halfTime.away ?? 0),
-          utcDate: m.utcDate
-        }));
+        const structuredMatches = weekMatches.map(m => {
+          const home = m.homeTeam.shortName || m.homeTeam.name;
+          const away = m.awayTeam.shortName || m.awayTeam.name;
+          const hScore = m.score.fullTime.home ?? 0;
+          const aScore = m.score.fullTime.away ?? 0;
 
+          const h1_home = m.score.halfTime.home ?? 0;
+          const h1_away = m.score.halfTime.away ?? 0;
+          const h2_home = hScore - h1_home;
+          const h2_away = aScore - h1_away;
+
+          return {
+            id: m.id,
+            week: maxMatchday,
+            home: home,
+            away: away,
+            home_score: hScore,
+            away_score: aScore,
+            h1_home: h1_home,
+            h1_away: h1_away,
+            h2_home: h2_home,
+            h2_away: h2_away,
+            utcDate: m.utcDate
+          };
+        });
+
+        // Save individual league match file (e.g., data/pl-matches.json)
         fs.writeFileSync(
           path.join(dataDir, `${leagueCodeLower}-matches.json`),
-          JSON.stringify(structuredFinished, null, 2)
+          JSON.stringify(structuredMatches, null, 2)
         );
+        console.log(`Updated data/${leagueCodeLower}-matches.json`);
       }
-
-      // 2. Process Scheduled/Upcoming Matches for Upcoming Fixtures Widget
-      const scheduledMatches = allMatches.filter(m => m.status === 'SCHEDULED' || m.status === 'TIMED');
-      if (scheduledMatches.length > 0) {
-        const nextMatchday = Math.min(...scheduledMatches.map(m => m.matchday || 999));
-        const weekUpcoming = scheduledMatches.filter(m => m.matchday === nextMatchday);
-
-        const structuredUpcoming = weekUpcoming.map(m => ({
-          id: m.id,
-          week: nextMatchday,
-          home: m.homeTeam.shortName || m.homeTeam.name,
-          away: m.awayTeam.shortName || m.awayTeam.name,
-          utcDate: m.utcDate
-        }));
-
-        fs.writeFileSync(
-          path.join(dataDir, `${leagueCodeLower}-upcoming.json`),
-          JSON.stringify(structuredUpcoming, null, 2)
-        );
-      } else {
-        // Fallback empty array
-        fs.writeFileSync(
-          path.join(dataDir, `${leagueCodeLower}-upcoming.json`),
-          JSON.stringify([], null, 2)
-        );
-      }
-
     } catch (err) {
-      console.log(`Error processing ${league.name}: ${err.message}`);
+      console.error(`Error processing core data for ${league.name}:`, err.message);
     }
   }
 
-  console.log('Successfully updated core and upcoming match files!');
+  console.log('Successfully completed core table updates!');
 }
 
 runCoreEngine();
