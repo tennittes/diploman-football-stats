@@ -19,11 +19,13 @@ async function runEngine() {
   const dataDir = path.join(__dirname, '../data');
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
 
-  const tickerItems = [];
+  const leaguesPayload = {};
+  const globalTickerStream = [];
 
   for (const league of LEAGUES) {
+    const leagueCodeLower = league.code.toLowerCase();
     try {
-      console.log(`Fetching data for ${league.name}...`);
+      console.log(`Fetching full-week match data for ${league.name}...`);
       
       const response = await axios.get(`https://api.football-data.org/v4/competitions/${league.id}/matches?status=FINISHED`, {
         headers: { 'X-Auth-Token': API_KEY }
@@ -31,26 +33,62 @@ async function runEngine() {
 
       const matches = response.data.matches || [];
       
-      // Get recent finished matches for ticker stream
-      const recentMatches = matches.slice(-6).reverse();
-      
-      recentMatches.forEach(m => {
-        const home = m.homeTeam.shortName || m.homeTeam.name;
-        const away = m.awayTeam.shortName || m.awayTeam.name;
-        const hScore = m.score.fullTime.home;
-        const aScore = m.score.fullTime.away;
+      if (matches.length > 0) {
+        // Find the maximum completed matchday/week
+        const maxMatchday = Math.max(...matches.map(m => m.matchday || 0));
         
-        // Exact format requested: 'Arsenal 1 - 1 Man United'
-        tickerItems.push(`${home} ${hScore} - ${aScore} ${away}`);
-      });
+        // Filter ALL matches belonging to that latest completed matchday
+        const weekMatches = matches.filter(m => m.matchday === maxMatchday);
+
+        const structuredMatches = weekMatches.map(m => {
+          const home = m.homeTeam.shortName || m.homeTeam.name;
+          const away = m.awayTeam.shortName || m.awayTeam.name;
+          const hScore = m.score.fullTime.home ?? 0;
+          const aScore = m.score.fullTime.away ?? 0;
+
+          // Halves score calculation
+          const h1_home = m.score.halfTime.home ?? 0;
+          const h1_away = m.score.halfTime.away ?? 0;
+          const h2_home = hScore - h1_home;
+          const h2_away = aScore - h1_away;
+
+          // Push string stream for legacy compatibility
+          globalTickerStream.push(`${home} ${hScore} - ${aScore} ${away}`);
+
+          return {
+            id: m.id,
+            week: maxMatchday,
+            home: home,
+            away: away,
+            home_score: hScore,
+            away_score: aScore,
+            h1_home: h1_home,
+            h1_away: h1_away,
+            h2_home: h2_home,
+            h2_away: h2_away,
+            utcDate: m.utcDate
+          };
+        });
+
+        leaguesPayload[leagueCodeLower] = structuredMatches;
+
+        // Write individual league match files (e.g., data/pl-matches.json)
+        fs.writeFileSync(
+          path.join(dataDir, `${leagueCodeLower}-matches.json`),
+          JSON.stringify(structuredMatches, null, 2)
+        );
+      } else {
+        leaguesPayload[leagueCodeLower] = [];
+      }
 
     } catch (err) {
       console.error(`Error processing ${league.name}:`, err.message);
+      leaguesPayload[leagueCodeLower] = [];
     }
   }
 
-  // Fallback ticker items if no recent matches were returned
-  const finalTickerList = tickerItems.length > 0 ? tickerItems : [
+  // Fallback ticker stream if API returned no data
+  const finalTickerStream = globalTickerStream.length > 0 ? globalTickerStream : [
     "Arsenal 2 - 1 Chelsea",
     "Real Madrid 3 - 1 Barcelona",
     "Inter 2 - 0 Juventus",
@@ -58,13 +96,19 @@ async function runEngine() {
     "PSG 2 - 0 Marseille"
   ];
 
-  // Output ticker.json
+  // Output master payload to data/ticker.json
+  const masterPayload = {
+    updated_at: new Date().toISOString(),
+    ticker_stream: finalTickerStream,
+    leagues: leaguesPayload
+  };
+
   fs.writeFileSync(
     path.join(dataDir, 'ticker.json'),
-    JSON.stringify({ items: finalTickerList }, null, 2)
+    JSON.stringify(masterPayload, null, 2)
   );
 
-  console.log('Successfully generated data/ticker.json');
+  console.log('Successfully generated full-week match payloads in data/!');
 }
 
 runEngine();
