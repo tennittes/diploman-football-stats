@@ -1,9 +1,20 @@
 {
-  "items": [
+  "updated_at": "2026-11-02T11:34:14.772Z",
+  "ticker_stream": [
     "Arsenal 2 - 1 Chelsea",
     "Real Madrid 3 - 1 Barcelona",
     "Inter 2 - 0 Juventus",
     "Bayern 4 - 1 Dortmund",
     "PSG 2 - 0 Marseille"
-  ]
+  ],
+  "leagues": {
+    "pl": [],
+    "pd": [],
+    "sa": [],
+    "bl1": [],
+    "fl1": [],
+    "ded": [],
+    "ppl": [],
+    "bsa": []
+  }
 }
