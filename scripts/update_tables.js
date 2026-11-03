@@ -31,10 +31,10 @@ async function runCoreEngine() {
       const matches = response.data.matches || [];
       
       if (matches.length > 0) {
-        // Find the latest completed matchday/week
+        // Dynamically find the latest completed matchday/week
         const maxMatchday = Math.max(...matches.map(m => m.matchday || 0));
         
-        // Filter ALL matches belonging to that latest completed matchday
+        // Filter ONLY matches belonging to that latest completed matchday
         const weekMatches = matches.filter(m => m.matchday === maxMatchday);
 
         const structuredMatches = weekMatches.map(m => {
@@ -63,19 +63,19 @@ async function runCoreEngine() {
           };
         });
 
-        // Save individual league match file (e.g., data/pl-matches.json)
+        // Save only the active matchday file (e.g., data/pl-matches.json)
         fs.writeFileSync(
           path.join(dataDir, `${leagueCodeLower}-matches.json`),
           JSON.stringify(structuredMatches, null, 2)
         );
-        console.log(`Updated data/${leagueCodeLower}-matches.json`);
+        console.log(`Updated data/${leagueCodeLower}-matches.json with Matchday ${maxMatchday}`);
       }
     } catch (err) {
       console.error(`Error processing core data for ${league.name}:`, err.message);
     }
   }
 
-  console.log('Successfully completed core table updates!');
+  console.log('Successfully completed core matchday table updates!');
 }
 
 runCoreEngine();
