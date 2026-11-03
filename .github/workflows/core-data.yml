@@ -2,7 +2,7 @@ name: Update Core League Tables & Matches
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # Every 6 hours
+    - cron: '0 4 * * 2,5' # Runs every Tuesday and Friday at 04:00 UTC
   workflow_dispatch:
 
 permissions:
@@ -33,5 +33,5 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/*-dfs.json data/*-pl.json data/*-matches.json
+          git add data/*-matches.json data/*-dfs.json data/*-pl.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update core league tables & match datasets [skip ci]" && git push)
