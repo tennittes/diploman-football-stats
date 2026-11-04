@@ -1,3 +1,10 @@
+name: Generate Weekly Football Report
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'
+
 jobs:
   build-report:
     runs-on: ubuntu-latest
