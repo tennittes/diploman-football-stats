@@ -1,0 +1,55 @@
+name: Generate Weekly Football Report
+
+on:
+  # Allows manual triggering from the Actions tab in GitHub
+  workflow_dispatch:
+  
+  # Optional: Schedule to run automatically every Monday at 06:00 UTC
+  schedule:
+    - cron: '0 6 * * 1'
+
+jobs:
+  build-report:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write # Grants the workflow permission to commit changes back to the repo
+
+    steps:
+      # 1. Checkout your repository code
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 3. Install dependencies (if you use any npm packages like node-fetch or fs-extra)
+      - name: Install Dependencies
+        run: |
+          if [ -f package.json ]; then
+            npm ci
+          fi
+
+      # 4. Run your Node script that processes JSON match files and generates the HTML report
+      - name: Run Report Generator Script
+        run: |
+          node scripts/generate-report.js
+
+      # 5. Automatically commit and push the generated report back to the repository
+      - name: Commit and Push Report
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Add your generated reports folder or file path
+          git add reports/
+          
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: auto-generate weekly match intelligence report [skip ci]"
+            git push
