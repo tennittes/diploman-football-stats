@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// Configuration for all 8 leagues
+// Configuration for all 8 leagues matching your repository filenames
 const leagues = [
   { id: "pl", name: "Premier League", file: "pl-matches.json", code: "PL" },
   { id: "pd", name: "La Liga", file: "pd-matches.json", code: "PD" },
@@ -13,8 +13,8 @@ const leagues = [
   { id: "bsa", name: "Brasileirão", file: "bsa-matches.json", code: "BSA" }
 ];
 
-const dataDir = path.join(__dirname, '../data');
-const outputDir = path.join(__dirname, '../reports');
+const dataDir = path.join(process.cwd(), 'data');
+const outputDir = path.join(process.cwd(), 'reports');
 
 // Ensure output directory exists
 if (!fs.existsSync(outputDir)) {
@@ -63,33 +63,37 @@ function computeStandings(matches) {
   })).sort((a, b) => b.dfsPts - a.dfsPts || b.gg - a.gg || b.gs - a.gs);
 }
 
-async function generateReport() {
+function generateReport() {
   let globalPool = [];
   let highestWeek = 1;
 
   leagues.forEach(league => {
     const filePath = path.join(dataDir, league.file);
     if (fs.existsSync(filePath)) {
-      const rawData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-      const leagueMax = Math.max(...rawData.map(m => m.week || 1));
-      if (leagueMax > highestWeek) highestWeek = leagueMax;
+      try {
+        const rawData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        if (Array.isArray(rawData) && rawData.length > 0) {
+          const leagueMax = Math.max(...rawData.map(m => m.week || 1));
+          if (leagueMax > highestWeek) highestWeek = leagueMax;
 
-      const standings = computeStandings(rawData);
-      standings.forEach(row => {
-        globalPool.push({
-          ...row,
-          leagueName: league.name,
-          code: league.code
-        });
-      });
+          const standings = computeStandings(rawData);
+          standings.forEach(row => {
+            globalPool.push({
+              ...row,
+              leagueName: league.name,
+              code: league.code
+            });
+          });
+        }
+      } catch (err) {
+        console.warn(`Error reading or parsing ${league.file}:`, err.message);
+      }
     }
   });
 
-  // Sort global pool by DFS points to get top global clubs
   globalPool.sort((a, b) => b.dfsPts - a.dfsPts || b.gg - a.gg);
   const top5 = globalPool.slice(0, 5);
 
-  // Generate HTML Rows for Top 5 Table
   const tableRowsHtml = top5.map((row, idx) => `
     <tr>
       <td>${(idx + 1) < 10 ? '0' + (idx + 1) : (idx + 1)}</td>
@@ -101,7 +105,6 @@ async function generateReport() {
     </tr>
   `).join('');
 
-  // Assemble Complete Report HTML
   const reportHtml = `
 <!-- DIPLOMAN FOOTBALL STATS - WEEKLY CROSS-LEAGUE INTELLIGENCE REPORT -->
 <div id="dfs-weekly-report" style="max-width: 800px; margin: 0 auto; background: #FFFFFF; color: #0F172A; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; border: 1px solid #E2E8F0; border-top: 4px solid #2563EB; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05); box-sizing: border-box;">
