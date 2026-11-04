@@ -1,1 +1,642 @@
-[]
+[
+  {
+    "player": "Kevin Viveros",
+    "club": "CA Paranaense",
+    "league": "Brasileirao",
+    "leagueShort": "BSA",
+    "goals": 21,
+    "assists": 3
+  },
+  {
+    "player": "Pedro",
+    "club": "CR Flamengo",
+    "league": "Brasileirao",
+    "leagueShort": "BSA",
+    "goals": 18,
+    "assists": 7
+  },
+  {
+    "player": "Gabriel Barbosa",
+    "club": "Santos FC",
+    "league": "Brasileirao",
+    "leagueShort": "BSA",
+    "goals": 15,
+    "assists": 4
+  },
+  {
+    "player": "Raphinha",
+    "club": "FC Barcelona",
+    "league": "La Liga",
+    "leagueShort": "PD",
+    "goals": 15,
+    "assists": 2
+  },
+  {
+    "player": "Kylian Mbappé",
+    "club": "Real Madrid CF",
+    "league": "La Liga",
+    "leagueShort": "PD",
+    "goals": 12,
+    "assists": 2
+  },
+  {
+    "player": "Kaio Jorge",
+    "club": "Cruzeiro EC",
+    "league": "Brasileirao",
+    "leagueShort": "BSA",
+    "goals": 12,
+    "assists": 2
+  },
+  {
+    "player": "Samuel Lino",
+    "club": "CR Flamengo",
+    "league": "Brasileirao",
+    "leagueShort": "BSA",
+    "goals": 11,
+    "assists": 9
+  },
+  {
+    "player": "Carlos Vinícius",
+    "club": "Grêmio FBPA",
+    "league": "Brasileirao",
+    "leagueShort": "BSA",
+    "goals": 11,
+    "assists": 1
+  },
+  {
+    "player": "Luciano Juba",
+    "club": "EC Bahia",
+    "league": "Brasileirao",
+    "leagueShort": "BSA",
+    "goals": 11,
+    "assists": 1
+  },
+  {
+    "player": "Lamine Yamal",
+    "club": "FC Barcelona",
+    "league": "La Liga",
+    "leagueShort": "PD",
+    "goals": 10,
+    "assists": 7
+  },
+  {
+    "player": "Vangelis Pavlidis",
+    "club": "Sport Lisboa e Benfica",
+    "league": "Primeira Liga",
+    "leagueShort": "PPL",
+    "goals": 10,
+    "assists": 3
+  },
+  {
+    "player": "Danilo dos Santos de Oliveira",
+    "club": "Botafogo FR",
+    "league": "Brasileirao",
+    "leagueShort": "BSA",
+    "goals": 10,
+    "assists": 2
+  },
+  {
+    "player": "Jonathan Calleri",
+    "club": "São Paulo FC",
+    "league": "Brasileirao",
+    "leagueShort": "BSA",
+    "goals": 10,
+    "assists": 2
+  },
+  {
+    "player": "José Manuel López",
+    "club": "SE Palmeiras",
+    "league": "Brasileirao",
+    "leagueShort": "BSA",
+    "goals": 9,
+    "assists": 6
+  },
+  {
+    "player": "Gustavo Varela",
+    "club": "AC Monza",
+    "league": "Serie A",
+    "leagueShort": "SA",
+    "goals": 9,
+    "assists": 1
+  },
+  {
+    "player": "Erling Haaland",
+    "club": "Manchester City FC",
+    "league": "Premier League",
+    "leagueShort": "PL",
+    "goals": 9,
+    "assists": 0
+  },
+  {
+    "player": "Niclas Füllkrug",
+    "club": "SV Werder Bremen",
+    "league": "Bundesliga",
+    "leagueShort": "BL1",
+    "goals": 9,
+    "assists": 0
+  },
+  {
+    "player": "Lassine Sinayoko",
+    "club": "Paris FC",
+    "league": "Ligue 1",
+    "leagueShort": "FL1",
+    "goals": 8,
+    "assists": 5
+  },
+  {
+    "player": "Søren Tengstedt",
+    "club": "Go Ahead Eagles",
+    "league": "Eredivisie",
+    "leagueShort": "DED",
+    "goals": 8,
+    "assists": 2
+  },
+  {
+    "player": "Wout Weghorst",
+    "club": "FC Twente '65",
+    "league": "Eredivisie",
+    "leagueShort": "DED",
+    "goals": 8,
+    "assists": 2
+  },
+  {
+    "player": "Donyell Malen",
+    "club": "AS Roma",
+    "league": "Serie A",
+    "leagueShort": "SA",
+    "goals": 8,
+    "assists": 1
+  },
+  {
+    "player": "Brynjolfur Darri Willumsson",
+    "club": "FC Groningen",
+    "league": "Eredivisie",
+    "leagueShort": "DED",
+    "goals": 8,
+    "assists": 1
+  },
+  {
+    "player": "Milan Zonneveld",
+    "club": "Sparta Rotterdam",
+    "league": "Eredivisie",
+    "leagueShort": "DED",
+    "goals": 8,
+    "assists": 1
+  },
+  {
+    "player": "Luis Suárez",
+    "club": "Sporting Clube de Portugal",
+    "league": "Primeira Liga",
+    "leagueShort": "PPL",
+    "goals": 8,
+    "assists": 1
+  },
+  {
+    "player": "Ante Budimir",
+    "club": "CA Osasuna",
+    "league": "La Liga",
+    "leagueShort": "PD",
+    "goals": 8,
+    "assists": 0
+  },
+  {
+    "player": "Yassir Zabiri",
+    "club": "Real Racing Club de Santander",
+    "league": "La Liga",
+    "leagueShort": "PD",
+    "goals": 8,
+    "assists": 0
+  },
+  {
+    "player": "Antonio Raimondo",
+    "club": "Frosinone Calcio",
+    "league": "Serie A",
+    "leagueShort": "SA",
+    "goals": 8,
+    "assists": 0
+  },
+  {
+    "player": "Thom van Bergen",
+    "club": "FC Groningen",
+    "league": "Eredivisie",
+    "leagueShort": "DED",
+    "goals": 7,
+    "assists": 3
+  },
+  {
+    "player": "Sergio Camello",
+    "club": "Rayo Vallecano de Madrid",
+    "league": "La Liga",
+    "leagueShort": "PD",
+    "goals": 7,
+    "assists": 2
+  },
+  {
+    "player": "Patrik Schick",
+    "club": "Bayer 04 Leverkusen",
+    "league": "Bundesliga",
+    "leagueShort": "BL1",
+    "goals": 7,
+    "assists": 2
+  },
+  {
+    "player": "Guus Til",
+    "club": "PSV",
+    "league": "Eredivisie",
+    "leagueShort": "DED",
+    "goals": 7,
+    "assists": 1
+  },
+  {
+    "player": "Esteban Lepaul",
+    "club": "Stade Rennais FC 1901",
+    "league": "Ligue 1",
+    "leagueShort": "FL1",
+    "goals": 7,
+    "assists": 0
+  },
+  {
+    "player": "Gianluca Prestianni",
+    "club": "Sport Lisboa e Benfica",
+    "league": "Primeira Liga",
+    "leagueShort": "PPL",
+    "goals": 6,
+    "assists": 4
+  },
+  {
+    "player": "Michael Olise",
+    "club": "FC Bayern München",
+    "league": "Bundesliga",
+    "leagueShort": "BL1",
+    "goals": 6,
+    "assists": 3
+  },
+  {
+    "player": "Amine Gouiri",
+    "club": "Olympique de Marseille",
+    "league": "Ligue 1",
+    "leagueShort": "FL1",
+    "goals": 6,
+    "assists": 3
+  },
+  {
+    "player": "Nikola Krstović",
+    "club": "Atalanta BC",
+    "league": "Serie A",
+    "leagueShort": "SA",
+    "goals": 6,
+    "assists": 2
+  },
+  {
+    "player": "Sepe Elye Wahi",
+    "club": "OGC Nice",
+    "league": "Ligue 1",
+    "leagueShort": "FL1",
+    "goals": 6,
+    "assists": 2
+  },
+  {
+    "player": "Julian Brandt",
+    "club": "AFC Ajax",
+    "league": "Eredivisie",
+    "leagueShort": "DED",
+    "goals": 6,
+    "assists": 2
+  },
+  {
+    "player": "Rafik el Arguioui",
+    "club": "SC Cambuur-Leeuwarden",
+    "league": "Eredivisie",
+    "leagueShort": "DED",
+    "goals": 6,
+    "assists": 2
+  },
+  {
+    "player": "Jacob Trenskow",
+    "club": "SC Heerenveen",
+    "league": "Eredivisie",
+    "leagueShort": "DED",
+    "goals": 6,
+    "assists": 2
+  },
+  {
+    "player": "Sven Mijnans",
+    "club": "PSV",
+    "league": "Eredivisie",
+    "leagueShort": "DED",
+    "goals": 6,
+    "assists": 2
+  },
+  {
+    "player": "Younes Ebnoutalib",
+    "club": "Eintracht Frankfurt",
+    "league": "Bundesliga",
+    "leagueShort": "BL1",
+    "goals": 6,
+    "assists": 1
+  },
+  {
+    "player": "Alexander Isak",
+    "club": "Liverpool FC",
+    "league": "Premier League",
+    "leagueShort": "PL",
+    "goals": 6,
+    "assists": 0
+  },
+  {
+    "player": "Roberto Fernández",
+    "club": "RCD Espanyol de Barcelona",
+    "league": "La Liga",
+    "leagueShort": "PD",
+    "goals": 6,
+    "assists": 0
+  },
+  {
+    "player": "Fer Niño",
+    "club": "Elche CF",
+    "league": "La Liga",
+    "leagueShort": "PD",
+    "goals": 6,
+    "assists": 0
+  },
+  {
+    "player": "Cameron Archer",
+    "club": "AJ Auxerre",
+    "league": "Ligue 1",
+    "leagueShort": "FL1",
+    "goals": 6,
+    "assists": 0
+  },
+  {
+    "player": "Gabriel Veiga",
+    "club": "FC Porto",
+    "league": "Primeira Liga",
+    "leagueShort": "PPL",
+    "goals": 5,
+    "assists": 4
+  },
+  {
+    "player": "João Pedro",
+    "club": "Chelsea FC",
+    "league": "Premier League",
+    "leagueShort": "PL",
+    "goals": 5,
+    "assists": 3
+  },
+  {
+    "player": "Álex Baena",
+    "club": "Club Atlético de Madrid",
+    "league": "La Liga",
+    "leagueShort": "PD",
+    "goals": 5,
+    "assists": 3
+  },
+  {
+    "player": "Adrien Rabiot",
+    "club": "AC Milan",
+    "league": "Serie A",
+    "leagueShort": "SA",
+    "goals": 5,
+    "assists": 3
+  },
+  {
+    "player": "Pierre-Emerick Aubameyang",
+    "club": "RC Deportivo La Coruña",
+    "league": "La Liga",
+    "leagueShort": "PD",
+    "goals": 5,
+    "assists": 2
+  },
+  {
+    "player": "Marcus Thuram-Ulien",
+    "club": "FC Internazionale Milano",
+    "league": "Serie A",
+    "leagueShort": "SA",
+    "goals": 5,
+    "assists": 2
+  },
+  {
+    "player": "Morgan Rogers",
+    "club": "Chelsea FC",
+    "league": "Premier League",
+    "leagueShort": "PL",
+    "goals": 5,
+    "assists": 1
+  },
+  {
+    "player": "Giacomo Calò",
+    "club": "Frosinone Calcio",
+    "league": "Serie A",
+    "leagueShort": "SA",
+    "goals": 5,
+    "assists": 1
+  },
+  {
+    "player": "Casper Tengstedt",
+    "club": "Toulouse FC",
+    "league": "Ligue 1",
+    "leagueShort": "FL1",
+    "goals": 5,
+    "assists": 1
+  },
+  {
+    "player": "Pau Victor Delgado",
+    "club": "Sporting Clube de Braga",
+    "league": "Primeira Liga",
+    "leagueShort": "PPL",
+    "goals": 5,
+    "assists": 1
+  },
+  {
+    "player": "André Clovis",
+    "club": "Académico de Viseu FC",
+    "league": "Primeira Liga",
+    "leagueShort": "PPL",
+    "goals": 5,
+    "assists": 1
+  },
+  {
+    "player": "Gonçalo Paciência",
+    "club": "CD Santa Clara",
+    "league": "Primeira Liga",
+    "leagueShort": "PPL",
+    "goals": 5,
+    "assists": 1
+  },
+  {
+    "player": "Borja Sainz",
+    "club": "FC Porto",
+    "league": "Primeira Liga",
+    "leagueShort": "PPL",
+    "goals": 5,
+    "assists": 1
+  },
+  {
+    "player": "Marcus Tavernier",
+    "club": "AFC Bournemouth",
+    "league": "Premier League",
+    "leagueShort": "PL",
+    "goals": 5,
+    "assists": 0
+  },
+  {
+    "player": "Nicolas Jackson",
+    "club": "Aston Villa FC",
+    "league": "Premier League",
+    "leagueShort": "PL",
+    "goals": 5,
+    "assists": 0
+  },
+  {
+    "player": "Anastasios Douvikas",
+    "club": "Como 1907",
+    "league": "Serie A",
+    "leagueShort": "SA",
+    "goals": 5,
+    "assists": 0
+  },
+  {
+    "player": "Daniel Maldini",
+    "club": "Cagliari Calcio",
+    "league": "Serie A",
+    "leagueShort": "SA",
+    "goals": 5,
+    "assists": 0
+  },
+  {
+    "player": "Michael Gregoritsch",
+    "club": "FC Augsburg",
+    "league": "Bundesliga",
+    "leagueShort": "BL1",
+    "goals": 5,
+    "assists": 0
+  },
+  {
+    "player": "Ermedin Demirovic",
+    "club": "VfB Stuttgart",
+    "league": "Bundesliga",
+    "leagueShort": "BL1",
+    "goals": 5,
+    "assists": 0
+  },
+  {
+    "player": "Phillip Tietz",
+    "club": "1. FSV Mainz 05",
+    "league": "Bundesliga",
+    "leagueShort": "BL1",
+    "goals": 5,
+    "assists": 0
+  },
+  {
+    "player": "Georgios Koutsias",
+    "club": "FC Famalicão",
+    "league": "Primeira Liga",
+    "leagueShort": "PPL",
+    "goals": 5,
+    "assists": 0
+  },
+  {
+    "player": "Barbero",
+    "club": "FC Arouca",
+    "league": "Primeira Liga",
+    "leagueShort": "PPL",
+    "goals": 5,
+    "assists": 0
+  },
+  {
+    "player": "Florian Thauvin",
+    "club": "Racing Club de Lens",
+    "league": "Ligue 1",
+    "leagueShort": "FL1",
+    "goals": 4,
+    "assists": 8
+  },
+  {
+    "player": "Antonio Nusa",
+    "club": "RB Leipzig",
+    "league": "Bundesliga",
+    "leagueShort": "BL1",
+    "goals": 4,
+    "assists": 6
+  },
+  {
+    "player": "Evanilson",
+    "club": "AFC Bournemouth",
+    "league": "Premier League",
+    "leagueShort": "PL",
+    "goals": 4,
+    "assists": 4
+  },
+  {
+    "player": "Rayan Cherki",
+    "club": "Manchester City FC",
+    "league": "Premier League",
+    "leagueShort": "PL",
+    "goals": 4,
+    "assists": 2
+  },
+  {
+    "player": "Kevin De Bruyne",
+    "club": "SSC Napoli",
+    "league": "Serie A",
+    "leagueShort": "SA",
+    "goals": 4,
+    "assists": 1
+  },
+  {
+    "player": "Luis Díaz",
+    "club": "FC Bayern München",
+    "league": "Bundesliga",
+    "leagueShort": "BL1",
+    "goals": 4,
+    "assists": 1
+  },
+  {
+    "player": "Kamory Doumbia",
+    "club": "Stade Brestois 29",
+    "league": "Ligue 1",
+    "leagueShort": "FL1",
+    "goals": 4,
+    "assists": 1
+  },
+  {
+    "player": "Sebastian Szymański",
+    "club": "Stade Rennais FC 1901",
+    "league": "Ligue 1",
+    "leagueShort": "FL1",
+    "goals": 4,
+    "assists": 1
+  },
+  {
+    "player": "Thierno Barry",
+    "club": "Everton FC",
+    "league": "Premier League",
+    "leagueShort": "PL",
+    "goals": 4,
+    "assists": 0
+  },
+  {
+    "player": "Bryan Mbeumo",
+    "club": "Manchester United FC",
+    "league": "Premier League",
+    "leagueShort": "PL",
+    "goals": 4,
+    "assists": 0
+  },
+  {
+    "player": "Yuito Suzuki",
+    "club": "SC Freiburg",
+    "league": "Bundesliga",
+    "leagueShort": "BL1",
+    "goals": 4,
+    "assists": 0
+  },
+  {
+    "player": "Louis Mafouta",
+    "club": "Le Mans FC",
+    "league": "Ligue 1",
+    "leagueShort": "FL1",
+    "goals": 4,
+    "assists": 0
+  }
+]
