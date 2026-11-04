@@ -1,0 +1,72 @@
+[
+  {
+    "player": "Alisson",
+    "club": "Liverpool",
+    "league": "PL",
+    "clean_sheets": 14,
+    "goals_conceded": 20
+  },
+  {
+    "player": "David Raya",
+    "club": "Arsenal",
+    "league": "PL",
+    "clean_sheets": 13,
+    "goals_conceded": 18
+  },
+  {
+    "player": "Ederson",
+    "club": "Man City",
+    "league": "PL",
+    "clean_sheets": 11,
+    "goals_conceded": 23
+  },
+  {
+    "player": "Yann Sommer",
+    "club": "Inter Milan",
+    "league": "SA",
+    "clean_sheets": 10,
+    "goals_conceded": 21
+  },
+  {
+    "player": "Thibaut Courtois",
+    "club": "Real Madrid",
+    "league": "PD",
+    "clean_sheets": 10,
+    "goals_conceded": 24
+  },
+  {
+    "player": "Mike Maignan",
+    "club": "AC Milan",
+    "league": "SA",
+    "clean_sheets": 9,
+    "goals_conceded": 26
+  },
+  {
+    "player": "Marc-André ter Stegen",
+    "club": "Barcelona",
+    "league": "PD",
+    "clean_sheets": 9,
+    "goals_conceded": 25
+  },
+  {
+    "player": "Manuel Neuer",
+    "club": "Bayern Munich",
+    "league": "BL1",
+    "clean_sheets": 8,
+    "goals_conceded": 27
+  },
+  {
+    "player": "Jan Oblak",
+    "club": "Atlético",
+    "league": "PD",
+    "clean_sheets": 8,
+    "goals_conceded": 28
+  },
+  {
+    "player": "Gianluigi Donnarumma",
+    "club": "PSG",
+    "league": "FL1",
+    "clean_sheets": 8,
+    "goals_conceded": 29
+  }
+]
