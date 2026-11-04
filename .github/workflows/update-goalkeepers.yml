@@ -1,0 +1,30 @@
+name: Update Goalkeepers Data
+
+on:
+  push:
+    paths:
+      - 'data/*-matches.json'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Run Goalkeeper Generator Script
+        run: node scripts/update-goalkeepers.js
+
+      - name: Commit and Push JSON
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add data/top-goalkeepers.json
+          git commit -m "Auto-update goalkeeper statistics [skip ci]" || exit 0
+          git push
