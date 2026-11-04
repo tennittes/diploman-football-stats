@@ -1,29 +1,33 @@
-name: Update Football Stats & Scorers
+name: Update Global Top Scorers & Assists
 
 on:
   schedule:
     - cron: '5 4 * * 2,5' # Runs every Tuesday and Friday at 04:05 UTC
-  workflow_dispatch:      # Allows manual trigger from GitHub Actions tab
+  workflow_dispatch:      # Allows manual trigger from Actions tab
 
 jobs:
-  update-data:
+  sourcing-and-output:
     runs-on: ubuntu-latest
     permissions:
-      contents: write     # Grants permission to commit changes back to the repo
+      contents: write     # Required to push commits back to the repo
+    
     steps:
-      - name: Checkout repository
+      - name: Checkout repository files
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Set up Node.js environment
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      - name: Run Scorer Aggregation Script
+      - name: Execute Data Sourcing Script
+        env:
+          FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
         run: node scripts/generate-scorers.js
 
-      - name: Commit and push changes
+      - name: Commit and push top-scorers.json output
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Auto-update match stats and global top scorers"
+          file_pattern: 'data/top-scorers.json'
+          commit_message: "Auto-update live player stats from football-data.org [skip ci]"
           branch: main
