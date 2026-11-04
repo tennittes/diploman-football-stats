@@ -2,7 +2,8 @@ name: Update Ticker Data Feed
 
 on:
   schedule:
-    - cron: '*/15 * * * *' # Every 15 minutes
+    # Runs every Tuesday and Friday at 06:00 UTC
+    - cron: '0 6 * * 2,5'
   workflow_dispatch:
 
 permissions:
