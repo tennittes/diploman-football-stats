@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T22:49:46.442Z",
+  "updated_at": "2026-11-04T02:52:01.776Z",
   "leagues": {
     "pl": [
       {
@@ -751,6 +751,28 @@
         "h1_home": 2,
         "h1_away": 1,
         "h2_home": 0,
+        "h2_away": 0
+      },
+      {
+        "home": "Chapecoense",
+        "away": "Mirassol",
+        "home_score": 1,
+        "away_score": 2,
+        "week": 34,
+        "h1_home": 1,
+        "h1_away": 1,
+        "h2_home": 0,
+        "h2_away": 1
+      },
+      {
+        "home": "Internacional",
+        "away": "Coritiba",
+        "home_score": 1,
+        "away_score": 0,
+        "week": 34,
+        "h1_home": 0,
+        "h1_away": 0,
+        "h2_home": 1,
         "h2_away": 0
       }
     ]
