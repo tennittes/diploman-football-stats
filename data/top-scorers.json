@@ -12,7 +12,7 @@
     "club": "CR Flamengo",
     "league": "Brasileirao",
     "leagueShort": "BSA",
-    "goals": 18,
+    "goals": 20,
     "assists": 7
   },
   {
@@ -32,6 +32,22 @@
     "assists": 2
   },
   {
+    "player": "Kaio Jorge",
+    "club": "Cruzeiro EC",
+    "league": "Brasileirao",
+    "leagueShort": "BSA",
+    "goals": 14,
+    "assists": 2
+  },
+  {
+    "player": "Samuel Lino",
+    "club": "CR Flamengo",
+    "league": "Brasileirao",
+    "leagueShort": "BSA",
+    "goals": 12,
+    "assists": 9
+  },
+  {
     "player": "Kylian Mbappé",
     "club": "Real Madrid CF",
     "league": "La Liga",
@@ -40,20 +56,12 @@
     "assists": 2
   },
   {
-    "player": "Kaio Jorge",
-    "club": "Cruzeiro EC",
-    "league": "Brasileirao",
-    "leagueShort": "BSA",
-    "goals": 12,
-    "assists": 2
-  },
-  {
-    "player": "Samuel Lino",
-    "club": "CR Flamengo",
+    "player": "Luciano Juba",
+    "club": "EC Bahia",
     "league": "Brasileirao",
     "leagueShort": "BSA",
     "goals": 11,
-    "assists": 9
+    "assists": 2
   },
   {
     "player": "Carlos Vinícius",
@@ -64,18 +72,18 @@
     "assists": 1
   },
   {
-    "player": "Luciano Juba",
-    "club": "EC Bahia",
-    "league": "Brasileirao",
-    "leagueShort": "BSA",
-    "goals": 11,
-    "assists": 1
-  },
-  {
     "player": "Lamine Yamal",
     "club": "FC Barcelona",
     "league": "La Liga",
     "leagueShort": "PD",
+    "goals": 10,
+    "assists": 7
+  },
+  {
+    "player": "José Manuel López",
+    "club": "SE Palmeiras",
+    "league": "Brasileirao",
+    "leagueShort": "BSA",
     "goals": 10,
     "assists": 7
   },
@@ -102,14 +110,6 @@
     "leagueShort": "BSA",
     "goals": 10,
     "assists": 2
-  },
-  {
-    "player": "José Manuel López",
-    "club": "SE Palmeiras",
-    "league": "Brasileirao",
-    "leagueShort": "BSA",
-    "goals": 9,
-    "assists": 6
   },
   {
     "player": "Gustavo Varela",
