@@ -1285,5 +1285,18 @@
     "h2_home": 0,
     "h2_away": 1,
     "utcDate": "2026-11-01T15:45:00Z"
+  },
+  {
+    "id": 558845,
+    "week": 12,
+    "home": "Willem II",
+    "away": "Zwolle",
+    "home_score": 1,
+    "away_score": 1,
+    "h1_home": 1,
+    "h1_away": 1,
+    "h2_home": 0,
+    "h2_away": 0,
+    "utcDate": "2026-11-06T19:00:00Z"
   }
 ]

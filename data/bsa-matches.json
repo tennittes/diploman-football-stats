@@ -4392,5 +4392,18 @@
     "h2_home": 2,
     "h2_away": 1,
     "utcDate": "2026-11-06T00:30:00Z"
+  },
+  {
+    "id": 555079,
+    "week": 34,
+    "home": "Vitória",
+    "away": "Fluminense",
+    "home_score": 0,
+    "away_score": 3,
+    "h1_home": 0,
+    "h1_away": 2,
+    "h2_home": 0,
+    "h2_away": 1,
+    "utcDate": "2026-11-06T23:00:00Z"
   }
 ]

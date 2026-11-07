@@ -934,5 +934,70 @@
     "h2_home": 2,
     "h2_away": 0,
     "utcDate": "2026-11-01T16:30:00Z"
+  },
+  {
+    "id": 565852,
+    "week": 9,
+    "home": "HSV",
+    "away": "M'gladbach",
+    "home_score": 3,
+    "away_score": 1,
+    "h1_home": 1,
+    "h1_away": 1,
+    "h2_home": 2,
+    "h2_away": 0,
+    "utcDate": "2026-11-06T19:30:00Z"
+  },
+  {
+    "id": 565848,
+    "week": 9,
+    "home": "RB Leipzig",
+    "away": "Augsburg",
+    "home_score": 5,
+    "away_score": 2,
+    "h1_home": 3,
+    "h1_away": 1,
+    "h2_home": 2,
+    "h2_away": 1,
+    "utcDate": "2026-11-07T14:30:00Z"
+  },
+  {
+    "id": 565850,
+    "week": 9,
+    "home": "Dortmund",
+    "away": "Elversberg",
+    "home_score": 2,
+    "away_score": 1,
+    "h1_home": 0,
+    "h1_away": 0,
+    "h2_home": 2,
+    "h2_away": 1,
+    "utcDate": "2026-11-07T14:30:00Z"
+  },
+  {
+    "id": 565851,
+    "week": 9,
+    "home": "Mainz",
+    "away": "Bayern",
+    "home_score": 1,
+    "away_score": 2,
+    "h1_home": 0,
+    "h1_away": 1,
+    "h2_home": 1,
+    "h2_away": 1,
+    "utcDate": "2026-11-07T14:30:00Z"
+  },
+  {
+    "id": 565853,
+    "week": 9,
+    "home": "SC Paderborn",
+    "away": "Frankfurt",
+    "home_score": 2,
+    "away_score": 2,
+    "h1_home": 1,
+    "h1_away": 1,
+    "h2_home": 1,
+    "h2_away": 1,
+    "utcDate": "2026-11-07T14:30:00Z"
   }
 ]
