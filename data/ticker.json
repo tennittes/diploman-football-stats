@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07T17:09:37.822Z",
+  "updated_at": "2026-11-10T14:11:48.358Z",
   "leagues": {
     "pl": [
       {
@@ -45,6 +45,72 @@
         "h1_away": 0,
         "h2_home": 1,
         "h2_away": 1
+      },
+      {
+        "home": "Nottingham",
+        "away": "Man City",
+        "home_score": 3,
+        "away_score": 1,
+        "week": 10,
+        "h1_home": 2,
+        "h1_away": 0,
+        "h2_home": 1,
+        "h2_away": 1
+      },
+      {
+        "home": "Crystal Palace",
+        "away": "Liverpool",
+        "home_score": 1,
+        "away_score": 3,
+        "week": 10,
+        "h1_home": 0,
+        "h1_away": 1,
+        "h2_home": 1,
+        "h2_away": 2
+      },
+      {
+        "home": "Sunderland",
+        "away": "Chelsea",
+        "home_score": 1,
+        "away_score": 0,
+        "week": 10,
+        "h1_home": 1,
+        "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 0
+      },
+      {
+        "home": "Ipswich Town",
+        "away": "Bournemouth",
+        "home_score": 1,
+        "away_score": 2,
+        "week": 10,
+        "h1_home": 0,
+        "h1_away": 1,
+        "h2_home": 1,
+        "h2_away": 1
+      },
+      {
+        "home": "Brighton Hove",
+        "away": "Brentford",
+        "home_score": 2,
+        "away_score": 0,
+        "week": 10,
+        "h1_home": 2,
+        "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 0
+      },
+      {
+        "home": "Man United",
+        "away": "Aston Villa",
+        "home_score": 4,
+        "away_score": 4,
+        "week": 10,
+        "h1_home": 2,
+        "h1_away": 2,
+        "h2_home": 2,
+        "h2_away": 2
       }
     ],
     "pd": [
@@ -69,6 +135,94 @@
         "h1_away": 0,
         "h2_home": 0,
         "h2_away": 2
+      },
+      {
+        "home": "Espanyol",
+        "away": "Deportivo",
+        "home_score": 0,
+        "away_score": 0,
+        "week": 12,
+        "h1_home": 0,
+        "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 0
+      },
+      {
+        "home": "Osasuna",
+        "away": "Athletic",
+        "home_score": 1,
+        "away_score": 1,
+        "week": 12,
+        "h1_home": 0,
+        "h1_away": 0,
+        "h2_home": 1,
+        "h2_away": 1
+      },
+      {
+        "home": "Valencia",
+        "away": "Real Madrid",
+        "home_score": 0,
+        "away_score": 3,
+        "week": 12,
+        "h1_home": 0,
+        "h1_away": 2,
+        "h2_home": 0,
+        "h2_away": 1
+      },
+      {
+        "home": "Elche",
+        "away": "Real Betis",
+        "home_score": 0,
+        "away_score": 2,
+        "week": 12,
+        "h1_home": 0,
+        "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 2
+      },
+      {
+        "home": "Real Sociedad",
+        "away": "Rayo Vallecano",
+        "home_score": 1,
+        "away_score": 0,
+        "week": 12,
+        "h1_home": 0,
+        "h1_away": 0,
+        "h2_home": 1,
+        "h2_away": 0
+      },
+      {
+        "home": "Celta",
+        "away": "Levante",
+        "home_score": 0,
+        "away_score": 0,
+        "week": 12,
+        "h1_home": 0,
+        "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 0
+      },
+      {
+        "home": "Villarreal",
+        "away": "Getafe",
+        "home_score": 2,
+        "away_score": 0,
+        "week": 12,
+        "h1_home": 0,
+        "h1_away": 0,
+        "h2_home": 2,
+        "h2_away": 0
+      },
+      {
+        "home": "Atleti",
+        "away": "Barça",
+        "home_score": 1,
+        "away_score": 2,
+        "week": 12,
+        "h1_home": 1,
+        "h1_away": 1,
+        "h2_home": 0,
+        "h2_away": 1
       }
     ],
     "sa": [
@@ -104,6 +258,83 @@
         "h1_away": 0,
         "h2_home": 0,
         "h2_away": 0
+      },
+      {
+        "home": "Parma",
+        "away": "Bologna",
+        "home_score": 1,
+        "away_score": 2,
+        "week": 11,
+        "h1_home": 0,
+        "h1_away": 0,
+        "h2_home": 1,
+        "h2_away": 2
+      },
+      {
+        "home": "Roma",
+        "away": "Sassuolo",
+        "home_score": 3,
+        "away_score": 0,
+        "week": 11,
+        "h1_home": 2,
+        "h1_away": 0,
+        "h2_home": 1,
+        "h2_away": 0
+      },
+      {
+        "home": "Napoli",
+        "away": "Lazio",
+        "home_score": 1,
+        "away_score": 1,
+        "week": 11,
+        "h1_home": 0,
+        "h1_away": 1,
+        "h2_home": 1,
+        "h2_away": 0
+      },
+      {
+        "home": "Genoa",
+        "away": "Milan",
+        "home_score": 1,
+        "away_score": 2,
+        "week": 11,
+        "h1_home": 0,
+        "h1_away": 2,
+        "h2_home": 1,
+        "h2_away": 0
+      },
+      {
+        "home": "Monza",
+        "away": "Atalanta",
+        "home_score": 0,
+        "away_score": 1,
+        "week": 11,
+        "h1_home": 0,
+        "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 1
+      },
+      {
+        "home": "Inter",
+        "away": "Como 1907",
+        "home_score": 2,
+        "away_score": 0,
+        "week": 11,
+        "h1_home": 2,
+        "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 0
+      },
+      {
+        "home": "Fiorentina",
+        "away": "Juventus",
+        "home_score": 2,
+        "away_score": 2,
+        "week": 11,
+        "h1_home": 1,
+        "h1_away": 1,
+        "h2_home": 1,
+        "h2_away": 1
       }
     ],
     "bl1": [
@@ -161,6 +392,50 @@
         "h1_away": 1,
         "h2_home": 1,
         "h2_away": 1
+      },
+      {
+        "home": "Stuttgart",
+        "away": "Bremen",
+        "home_score": 1,
+        "away_score": 0,
+        "week": 9,
+        "h1_home": 1,
+        "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 0
+      },
+      {
+        "home": "1. FC Köln",
+        "away": "Leverkusen",
+        "home_score": 1,
+        "away_score": 2,
+        "week": 9,
+        "h1_home": 0,
+        "h1_away": 1,
+        "h2_home": 1,
+        "h2_away": 1
+      },
+      {
+        "home": "Freiburg",
+        "away": "Union Berlin",
+        "home_score": 2,
+        "away_score": 0,
+        "week": 9,
+        "h1_home": 0,
+        "h1_away": 0,
+        "h2_home": 2,
+        "h2_away": 0
+      },
+      {
+        "home": "Hoffenheim",
+        "away": "Schalke",
+        "home_score": 2,
+        "away_score": 1,
+        "week": 9,
+        "h1_home": 2,
+        "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 1
       }
     ],
     "fl1": [
@@ -173,6 +448,94 @@
         "h1_home": 1,
         "h1_away": 0,
         "h2_home": 2,
+        "h2_away": 1
+      },
+      {
+        "home": "Auxerre",
+        "away": "Paris FC",
+        "home_score": 0,
+        "away_score": 1,
+        "week": 10,
+        "h1_home": 0,
+        "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 1
+      },
+      {
+        "home": "PSG",
+        "away": "Troyes",
+        "home_score": 1,
+        "away_score": 0,
+        "week": 10,
+        "h1_home": 1,
+        "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 0
+      },
+      {
+        "home": "Stade Rennais",
+        "away": "Lille",
+        "home_score": 1,
+        "away_score": 2,
+        "week": 10,
+        "h1_home": 1,
+        "h1_away": 1,
+        "h2_home": 0,
+        "h2_away": 1
+      },
+      {
+        "home": "Le Mans",
+        "away": "Monaco",
+        "home_score": 1,
+        "away_score": 1,
+        "week": 10,
+        "h1_home": 0,
+        "h1_away": 1,
+        "h2_home": 1,
+        "h2_away": 0
+      },
+      {
+        "home": "Brest",
+        "away": "Olympique Lyon",
+        "home_score": 2,
+        "away_score": 0,
+        "week": 10,
+        "h1_home": 1,
+        "h1_away": 0,
+        "h2_home": 1,
+        "h2_away": 0
+      },
+      {
+        "home": "Le Havre",
+        "away": "Lorient",
+        "home_score": 0,
+        "away_score": 2,
+        "week": 10,
+        "h1_home": 0,
+        "h1_away": 1,
+        "h2_home": 0,
+        "h2_away": 1
+      },
+      {
+        "home": "Angers SCO",
+        "away": "Nice",
+        "home_score": 0,
+        "away_score": 2,
+        "week": 10,
+        "h1_home": 0,
+        "h1_away": 1,
+        "h2_home": 0,
+        "h2_away": 1
+      },
+      {
+        "home": "RC Lens",
+        "away": "Marseille",
+        "home_score": 1,
+        "away_score": 2,
+        "week": 10,
+        "h1_home": 1,
+        "h1_away": 1,
+        "h2_home": 0,
         "h2_away": 1
       }
     ],
@@ -187,6 +550,94 @@
         "h1_away": 1,
         "h2_home": 0,
         "h2_away": 0
+      },
+      {
+        "home": "Sittard",
+        "away": "Telstar",
+        "home_score": 2,
+        "away_score": 2,
+        "week": 12,
+        "h1_home": 2,
+        "h1_away": 2,
+        "h2_home": 0,
+        "h2_away": 0
+      },
+      {
+        "home": "Den Haag",
+        "away": "Sparta",
+        "home_score": 3,
+        "away_score": 1,
+        "week": 12,
+        "h1_home": 1,
+        "h1_away": 0,
+        "h2_home": 2,
+        "h2_away": 1
+      },
+      {
+        "home": "Excelsior",
+        "away": "Go Ahead",
+        "home_score": 0,
+        "away_score": 1,
+        "week": 12,
+        "h1_home": 0,
+        "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 1
+      },
+      {
+        "home": "Heerenveen",
+        "away": "Feyenoord",
+        "home_score": 5,
+        "away_score": 3,
+        "week": 12,
+        "h1_home": 1,
+        "h1_away": 2,
+        "h2_home": 4,
+        "h2_away": 1
+      },
+      {
+        "home": "Twente",
+        "away": "Ajax",
+        "home_score": 2,
+        "away_score": 2,
+        "week": 12,
+        "h1_home": 0,
+        "h1_away": 1,
+        "h2_home": 2,
+        "h2_away": 1
+      },
+      {
+        "home": "AZ",
+        "away": "Groningen",
+        "home_score": 4,
+        "away_score": 3,
+        "week": 12,
+        "h1_home": 1,
+        "h1_away": 1,
+        "h2_home": 3,
+        "h2_away": 2
+      },
+      {
+        "home": "Cambuur",
+        "away": "PSV",
+        "home_score": 2,
+        "away_score": 5,
+        "week": 12,
+        "h1_home": 1,
+        "h1_away": 3,
+        "h2_home": 1,
+        "h2_away": 2
+      },
+      {
+        "home": "Utrecht",
+        "away": "NEC",
+        "home_score": 2,
+        "away_score": 3,
+        "week": 12,
+        "h1_home": 0,
+        "h1_away": 2,
+        "h2_home": 2,
+        "h2_away": 1
       }
     ],
     "ppl": [
@@ -200,6 +651,83 @@
         "h1_away": 0,
         "h2_home": 1,
         "h2_away": 0
+      },
+      {
+        "home": "Alverca",
+        "away": "Casa Pia",
+        "home_score": 1,
+        "away_score": 1,
+        "week": 11,
+        "h1_home": 0,
+        "h1_away": 1,
+        "h2_home": 1,
+        "h2_away": 0
+      },
+      {
+        "home": "Sporting CP",
+        "away": "Moreirense",
+        "home_score": 1,
+        "away_score": 0,
+        "week": 11,
+        "h1_home": 0,
+        "h1_away": 0,
+        "h2_home": 1,
+        "h2_away": 0
+      },
+      {
+        "home": "Santa Clara",
+        "away": "Gil Vicente",
+        "home_score": 1,
+        "away_score": 2,
+        "week": 11,
+        "h1_home": 1,
+        "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 2
+      },
+      {
+        "home": "CD Nacional",
+        "away": "Acad. Viseu",
+        "home_score": 1,
+        "away_score": 0,
+        "week": 11,
+        "h1_home": 0,
+        "h1_away": 0,
+        "h2_home": 1,
+        "h2_away": 0
+      },
+      {
+        "home": "Vitória SC",
+        "away": "Porto",
+        "home_score": 1,
+        "away_score": 2,
+        "week": 11,
+        "h1_home": 0,
+        "h1_away": 1,
+        "h2_home": 1,
+        "h2_away": 1
+      },
+      {
+        "home": "Rio Ave",
+        "away": "Braga",
+        "home_score": 0,
+        "away_score": 1,
+        "week": 11,
+        "h1_home": 0,
+        "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 1
+      },
+      {
+        "home": "Amadora",
+        "away": "SL Benfica",
+        "home_score": 2,
+        "away_score": 3,
+        "week": 11,
+        "h1_home": 0,
+        "h1_away": 1,
+        "h2_home": 2,
+        "h2_away": 2
       }
     ],
     "bsa": [
