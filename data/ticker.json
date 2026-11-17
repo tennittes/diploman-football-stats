@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T13:49:42.211Z",
+  "updated_at": "2026-11-17T15:24:30.715Z",
   "leagues": {
     "pl": [
       {
@@ -732,114 +732,15 @@
     ],
     "bsa": [
       {
-        "home": "Bragantino",
-        "away": "Santos",
-        "home_score": 2,
-        "away_score": 1,
-        "week": 34,
-        "h1_home": 2,
-        "h1_away": 1,
-        "h2_home": 0,
-        "h2_away": 0
-      },
-      {
-        "home": "Chapecoense",
-        "away": "Mirassol",
-        "home_score": 1,
-        "away_score": 2,
-        "week": 34,
-        "h1_home": 1,
-        "h1_away": 1,
-        "h2_home": 0,
-        "h2_away": 1
-      },
-      {
-        "home": "Internacional",
-        "away": "Coritiba",
-        "home_score": 1,
-        "away_score": 0,
-        "week": 34,
-        "h1_home": 0,
-        "h1_away": 0,
-        "h2_home": 1,
-        "h2_away": 0
-      },
-      {
-        "home": "Paranaense",
-        "away": "Vasco da Gama",
-        "home_score": 1,
-        "away_score": 3,
-        "week": 34,
-        "h1_home": 1,
-        "h1_away": 0,
-        "h2_home": 0,
-        "h2_away": 3
-      },
-      {
-        "home": "Flamengo",
-        "away": "Grêmio",
-        "home_score": 3,
-        "away_score": 1,
-        "week": 34,
-        "h1_home": 3,
-        "h1_away": 0,
-        "h2_home": 0,
-        "h2_away": 1
-      },
-      {
-        "home": "Botafogo",
+        "home": "Mirassol",
         "away": "Mineiro",
-        "home_score": 1,
-        "away_score": 0,
-        "week": 34,
-        "h1_home": 1,
-        "h1_away": 0,
-        "h2_home": 0,
-        "h2_away": 0
-      },
-      {
-        "home": "São Paulo",
-        "away": "Corinthians",
         "home_score": 0,
         "away_score": 0,
-        "week": 34,
+        "week": 35,
         "h1_home": 0,
         "h1_away": 0,
         "h2_home": 0,
         "h2_away": 0
-      },
-      {
-        "home": "Palmeiras",
-        "away": "Clube do Remo",
-        "home_score": 6,
-        "away_score": 1,
-        "week": 34,
-        "h1_home": 4,
-        "h1_away": 1,
-        "h2_home": 2,
-        "h2_away": 0
-      },
-      {
-        "home": "Cruzeiro",
-        "away": "Bahia",
-        "home_score": 3,
-        "away_score": 2,
-        "week": 34,
-        "h1_home": 1,
-        "h1_away": 1,
-        "h2_home": 2,
-        "h2_away": 1
-      },
-      {
-        "home": "Vitória",
-        "away": "Fluminense",
-        "home_score": 0,
-        "away_score": 3,
-        "week": 34,
-        "h1_home": 0,
-        "h1_away": 2,
-        "h2_home": 0,
-        "h2_away": 1
       }
     ]
   }
