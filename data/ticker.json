@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T15:24:30.715Z",
+  "updated_at": "2026-11-20T14:48:12.431Z",
   "leagues": {
     "pl": [
       {
@@ -739,6 +739,105 @@
         "week": 35,
         "h1_home": 0,
         "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 0
+      },
+      {
+        "home": "Coritiba",
+        "away": "Santos",
+        "home_score": 0,
+        "away_score": 1,
+        "week": 35,
+        "h1_home": 0,
+        "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 1
+      },
+      {
+        "home": "Clube do Remo",
+        "away": "Chapecoense",
+        "home_score": 2,
+        "away_score": 0,
+        "week": 35,
+        "h1_home": 2,
+        "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 0
+      },
+      {
+        "home": "Cruzeiro",
+        "away": "Palmeiras",
+        "home_score": 2,
+        "away_score": 1,
+        "week": 35,
+        "h1_home": 0,
+        "h1_away": 0,
+        "h2_home": 2,
+        "h2_away": 1
+      },
+      {
+        "home": "Flamengo",
+        "away": "Paranaense",
+        "home_score": 2,
+        "away_score": 1,
+        "week": 35,
+        "h1_home": 2,
+        "h1_away": 1,
+        "h2_home": 0,
+        "h2_away": 0
+      },
+      {
+        "home": "Corinthians",
+        "away": "Botafogo",
+        "home_score": 4,
+        "away_score": 0,
+        "week": 35,
+        "h1_home": 2,
+        "h1_away": 0,
+        "h2_home": 2,
+        "h2_away": 0
+      },
+      {
+        "home": "Grêmio",
+        "away": "Bahia",
+        "home_score": 0,
+        "away_score": 0,
+        "week": 35,
+        "h1_home": 0,
+        "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 0
+      },
+      {
+        "home": "Vasco da Gama",
+        "away": "Internacional",
+        "home_score": 2,
+        "away_score": 1,
+        "week": 35,
+        "h1_home": 1,
+        "h1_away": 0,
+        "h2_home": 1,
+        "h2_away": 1
+      },
+      {
+        "home": "Vitória",
+        "away": "Bragantino",
+        "home_score": 2,
+        "away_score": 1,
+        "week": 35,
+        "h1_home": 2,
+        "h1_away": 0,
+        "h2_home": 0,
+        "h2_away": 1
+      },
+      {
+        "home": "São Paulo",
+        "away": "Fluminense",
+        "home_score": 0,
+        "away_score": 1,
+        "week": 35,
+        "h1_home": 0,
+        "h1_away": 1,
         "h2_home": 0,
         "h2_away": 0
       }
